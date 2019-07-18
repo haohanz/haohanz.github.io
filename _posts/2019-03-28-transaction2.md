@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Transactions & Raplication Basics"
-subtitle: "Learning Notes for CMU Course 15640"
+subtitle: "Learning Notes for CMU Course 15640 Distributed Systems"
 date: 2019-03-28 23:45:13 -0400
 background: '/img/posts/04.jpg'
 ---
