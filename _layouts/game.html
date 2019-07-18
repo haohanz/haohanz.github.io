@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+
+<style type="text/css">
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+#main {
+    height: 40%;
+    background: white;
+    box-shadow:20px 20px 50px white;
+    margin: 20% 0 5% 0;
+}
+
+#start {
+    border: 0px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+}
+</style>
+
+<script type="text/javascript">
+var cost = 0;
+var times = 0;
+var image = function(img) {
+    img.style.display = 'None';
+    times += 1;
+    cost += Date.now() - img.id;
+}
+
+var max = 0.8;
+var min = 0.2;
+var pos = function() {
+    var height = $("#main")[0].offsetTop;
+    var cHeight = $("#main")[0].clientHeight;
+    var width = $("#main")[0].offsetLeft;
+    var cWidth = $("#main")[0].clientWidth;
+    var h = height + (Math.random() * (max - min) + min) * cHeight;
+    var w = width + (Math.random() * (max - min) + min) * cWidth;
+    var r = Math.random() * 360;
+    time = Date.now();
+    var imgStr = `<img src="/img/cat.jpg" id="${time}" style="height:80px; width:80px; transform:rotate(${r}deg);position:absolute;top:${h}px;left:${w}px" height="150" size="150" onclick="image(this)">`;
+    $("#main")[0].innerHTML += imgStr;
+}
+
+var run = function() {
+    $("#main")[0].innerHTML = '';
+    clearInterval(load);
+    var i = 0;
+    var load = window.setInterval(function(){
+        i += 1;
+        pos();
+        if (i > 25) {
+            if (times)
+                var results = "Avg Cost: " + cost/times + " ms";
+            else
+                var results = "Avg cost: inf";
+            $("#main")[0].innerHTML = `<p style="color:black">${results}</p>`;
+            clearInterval(load);
+        }
+    }, 200);
+}
+</script>
+
+    <body>
+        {% include navbar.html %}
+        <!-- Page Header -->
+        {% if page.background %}
+        <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+            {% else %}
+            <header class="masthead">
+                {% endif %}
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <div class="page-heading" id="main" style="padding:5% 0 0 20% 0">
+                                <h2 class="post-title" style="color:black">Speed Challenge</h2>
+                            </div>
+                            <div>
+                            <button class="btn btn-primary" id="start" onclick="run()" >Start</button>
+                            </div>
+                        </div>
+                    </div>
+                    {% include footer.html %}
+
+                </div>
+            </header>
+            {{ content }}
+            {% include scripts.html %}
+            {% include google-analytics.html %}
+
+    </body>
+</html>
