@@ -50,6 +50,7 @@ var pos = function() {
 
 var run = function() {
     $("#main")[0].innerHTML = '';
+    $("#start")[0].disabled = true;
     clearInterval(load);
     var i = 0;
     var load = window.setInterval(function(){
@@ -60,8 +61,9 @@ var run = function() {
                 var results = "Avg Cost: " + cost/times + " ms";
             else
                 var results = "Avg cost: inf";
-            $("#main")[0].innerHTML = `<p style="color:black">${results}</p>`;
             clearInterval(load);
+            $("#start")[0].disabled = false;
+            $("#main")[0].innerHTML = `<p style="color:black">${results}</p>`;
         }
     }, 200);
 }
