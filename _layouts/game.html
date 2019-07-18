@@ -56,7 +56,7 @@ var run = function() {
     var load = window.setInterval(function(){
         i += 1;
         pos();
-        if (i > 25) {
+        if (i > 20) {
             if (times)
                 var results = "Avg Cost: " + cost/times + " ms";
             else
@@ -65,7 +65,7 @@ var run = function() {
             $("#start")[0].disabled = false;
             $("#main")[0].innerHTML = `<p style="color:black">${results}</p>`;
         }
-    }, 200);
+    }, 350);
 }
 </script>
 
