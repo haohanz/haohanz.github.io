@@ -10,214 +10,317 @@ html {
 }
 </style>
 <!--
-<header class="masthead" style="height:100%; background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}');height:100%">
+    <header class="masthead" style="height:100%; background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}');height:100%">
 -->
-<header class="masthead" style="background-image: url('/img/posts/06.jpg')">
-  {% else %}
-  <header class="masthead" style="height:100%">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading" style="height:100%;padding:260px 0">
-            <h1>{{ site.title }}<br/></h1>
-            {% if site.description %}
-            <h2 class="subheading">{{ site.description }} 
-            </h2>
-            <span class="meta">
-                <a href="https://www.linkedin.com/in/haohan-zhang/">LinkedIn</a>
-                &middot; 
-                <a href="https://github.com/haohanz">Github</a>
-                &middot; 
-                <a href="https://scholar.google.ca/citations?user=gWW2LSUAAAAJ">Google Scholar</a>
-                &middot; 
-                <a href="https://www.researchgate.net/profile/Haohan_Zhang2">ResearchGate</a>
-                &middot; 
-                <a href="https://www.xiami.com/artist/nnGt6t5b967">Xiami Music</a>
-                &middot; 
-                <a href="https://www.instagram.com/hhz.carrie/">Instagram</a>
-            </span>
-            {% endif %}
-          </div>
+<header class="masthead" style="background-image: url('/img/posts/06.jpg'); height:100%">
+    {% else %}
+    <header class="masthead" style="height:100%">
+        {% endif %}
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading" style="height:100%; padding: 40% 0 50% 0; vertical-align: middle;">
+                        <h1>{{ site.title }}<br/></h1>
+                        {% if site.description %}
+                        <h2 class="subheading">{{ site.description }} 
+                        </h2>
+                        <span class="meta">
+                            <a href="https://www.linkedin.com/in/haohan-zhang/">LinkedIn</a>
+                            &middot; 
+                            <a href="https://github.com/haohanz">Github</a>
+                            &middot; 
+                            <a href="https://scholar.google.ca/citations?user=gWW2LSUAAAAJ">Google Scholar</a>
+                            &middot; 
+                            <a href="https://www.researchgate.net/profile/Haohan_Zhang2">ResearchGate</a>
+                            &middot; 
+                            <a href="https://www.xiami.com/artist/nnGt6t5b967">Xiami Music</a>
+                            &middot; 
+                            <a href="https://www.instagram.com/hhz.carrie/">Instagram</a>
+                        </span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
 
-        {{ content }}
+                {{ content }}
 
 
-        <div id="about">
-        <article class="post-preview">
-          <a>
-            <h2 class="post-title">Education
-            </h2>
-          </a>
-          <a style="display: inline">
-            <h3 class="post-subtitle" style="display: inline">
-                Carnegie Mellon University
-            </h3> 
-          </a>
-          <span class="post-meta" title="Estimated read time">
-            Aug 2018 - Dec 2019
-          </span>
-          <p class="post-meta">
-          Computer Science Department
-          &middot; 
-          Master of Information and Technology Strategy
-          </p>
+                <div id="about">
+                    <article class="post-preview">
+                        <a>
+                            <h2 class="post-title">Education
+                            </h2>
+                        </a>
+                        <a style="display: inline">
+                            <h3 class="post-subtitle" style="display: inline">
+                                Carnegie Mellon University
+                            </h3> 
+                        </a>
+                        <span class="post-meta" title="Estimated read time">
+                            Aug 2018 - Dec 2019
+                        </span>
+                        <p class="post-meta">
+                        Computer Science Department
+                        &middot; 
+                        Master of Information and Technology Strategy
+                        </p>
 
-          <a style="display: inline">
-            <h3 class="post-subtitle" style="display: inline">
-                Fudan University
-            </h3> 
-          </a>
-          <span class="post-meta" title="Estimated read time">
-            Sep 2014 - Jun 2018
-          </span>
-          <p class="post-meta">
-          School of Computer Science
-          &middot;
-          Bachelor of Science
-          </p>
+                        <a style="display: inline">
+                            <h3 class="post-subtitle" style="display: inline">
+                                Fudan University
+                            </h3> 
+                        </a>
+                        <span class="post-meta" title="Estimated read time">
+                            Sep 2014 - Jun 2018
+                        </span>
+                        <p class="post-meta">
+                        School of Computer Science
+                        &middot;
+                        Bachelor of Science
+                        </p>
 
-        </article>
-        <hr>
+                    </article>
+                    <hr>
 
 
 
+                    <article class="post-preview">
+                        <a>
+                            <h2 class="post-title">Skills
+                            </h2>
+                        </a>
+                        <a>
+                        </a>
+
+                        <a>
+                            <h4 class="post-subtitle">
+                                Coding Languages
+                            </h4> 
+                        </a>
+                        <p class="post-meta" style="font-size:15px">
+                        Python
+                        &middot; 
+                        Java
+                        &middot; 
+                        C
+                        &middot; 
+                        C++
+                        &middot; 
+                        Bash
+                        &middot; 
+                        JavaScript
+                        &middot; 
+                        Assembly
+                        &middot; 
+                        Scala
+                        &middot; 
+                        R
+                        &middot; 
+                        PHP
+                        &middot; 
+                        HTML
+                        &middot; 
+                        CSS
+                        </p>
+
+                        <a>
+                            <h4 class="post-subtitle">
+                                Tools & Technologies
+                            </h4> 
+                        </a>
+                        <p class="post-meta" style="font-size:15px">
+                        Git
+                        &middot; 
+                        AWS
+                        &middot; 
+                        Django
+                        &middot; 
+                        Java RMI
+                        &middot; 
+                        RESTful
+                        &middot; 
+                        Elastic Stack
+                        &middot; 
+                        Splunk
+                        &middot; 
+                        Node.js
+                        &middot; 
+                        MySQL
+                        &middot; 
+                        MATLAB
+                        &middot; 
+                        Linux
+                        &middot; 
+                        LaTeX
+                        </p>
+
+                        <a>
+                            <h4 class="post-subtitle">
+                                Industry Knowledge
+                            </h4> 
+                        </a>
+                        <p class="post-meta" style="font-size:15px">
+                        Machine Learning
+                        &middot; 
+                        Deep Learning
+                        &middot; 
+                        Distributed System
+                        &middot; 
+                        Cloud Computing
+                        &middot; 
+                        Algorithms
+                        </p>
+
+                        <a>
+                            <h4 class="post-subtitle">
+                                Languages
+                            </h4> 
+                        </a>
+                        <p class="post-meta" style="font-size:15px">
+                        English (Professional Working Proficiency)
+                        &middot; 
+                        Chinese (Native)
+                        &middot; 
+                        Japanese (Elementary proficiency)
+                        </p>
+
+                        <a>
+                            <h4 class="post-subtitle">
+                                Music Tech
+                            </h4> 
+                        </a>
+                        <p class="post-meta" style="font-size:15px">
+                        FL Studio
+                        &middot; 
+                        Ableton Live
+                        &middot; 
+                        Analog Lab Lite
+                        </p>
+
+                    </article>
+                    <hr>
 
 
 
 
+                    <div id="experiences"></div>
+                    <article class="post-preview">
+                        <a>
+                            <h2 class="post-title">Experiences</h2>
+                        </a>
 
 
+                        <a style="display: inline">
+                            <h4 class="post-subtitle" style="display: inline">
+                                Highmark Inc.
+                            </h4> 
+                        </a>
+                        <span class="post-meta" title="Estimated read time" style="font-size:15px">
+                            May, 2019 - Present
+                        </span>
+                        <p class="post-meta" style="font-size:15px">
+                        Pittsburgh, PA
+                        &middot; 
+                        Software Development Intern
+                        &middot; 
+                        <a href="https://www.heinz.cmu.edu/faculty-research/profiles/yasar-hasan">Advisor: Hasan Yasar</a>
+                        &middot; 
+                        <a href="/#work"> View Project</a>
+                        </p>
 
 
+                        <a style="display: inline">
+                            <h4 class="post-subtitle" style="display: inline">
+                                YITU Technology
+                            </h4> 
+                        </a>
+                        <span class="post-meta" title="Estimated read time" style="font-size:15px">
+                            Apr 2018 - Jul 2018
+                        </span>
+                        <p class="post-meta" style="font-size:15px">
+                        Shanghai
+                        &middot; 
+                        Research and Development Intern
+                        &middot; 
+                        <a href="/#work"> View Project</a>
+                        </p>
 
 
+                        <a style="display: inline">
+                            <h3 class="post-subtitle" style="display: inline">
+                                eBay Inc.
+                            </h3> 
+                        </a>
+                        <span class="post-meta" title="Estimated read time" style="font-size:15px">
+                            Nov 2017 - Mar 2018
+                        </span>
+                        <p class="post-meta" style="font-size:15px">
+                        Shanghai
+                        &middot; 
+                        DevOps Software Engineer Intern
+                        &middot; 
+                        <a href="/#yitu"> View Project</a>
+                        </p>
 
 
-        <div id="experiences"></div>
-        <article class="post-preview">
-            <a>
-            <h2 class="post-title">Experiences</h2>
-            </a>
+                        <a style="display: inline">
+                            <h4 class="post-subtitle" style="display: inline">
+                                University of Waterloo
+                            </h4>
+                        </a>
+                        <span class="post-meta" title="Estimated read time" style="font-size:15px">
+                            Sep 2017 - Oct 2017
+                        </span>
+                        <p class="post-meta" style="font-size:15px">
+                        Waterloo, ON
+                        &middot; 
+                        Research Intern
+                        &middot; 
+                        <a href="https://cs.uwaterloo.ca/~mli/">Advisor: Ming Li 
+                        </a>
+                        &middot; 
+                        <a href="/#research"> View Project</a>
+                        </p>
 
 
+                        <a style="display: inline">
+                            <h4 class="post-subtitle" style="display: inline">
+                                University of California, Irvine
+                            </h4> 
+                        </a>
+                        <span class="post-meta" title="Estimated read time" style="font-size:15px">
+                            Jul 2017 – Sep 2017
+                        </span>
+                        <p class="post-meta" style="font-size:15px">
+                        Irvine, CA
+                        &middot; 
+                        Research Intern
+                        &middot; 
+                        <a href="https://chenli.ics.uci.edu/">Advisor: Chen Li 
+                        </a>
+                        &middot; 
+                        <a href="/#research"> View Project</a>
+                        </p>
 
 
-          <a style="display: inline">
-            <h4 class="post-subtitle" style="display: inline">
-                Highmark Inc.
-            </h4> 
-          </a>
-          <span class="post-meta" title="Estimated read time" style="font-size:15px">
-                May, 2019 - Present
-          </span>
-          <p class="post-meta" style="font-size:15px">
-          Pittsburgh, PA
-          &middot; 
-          Software Development Intern
-          &middot; 
-          <a href="https://www.heinz.cmu.edu/faculty-research/profiles/yasar-hasan">Advisor: Hasan Yasar</a>
-          &middot; 
-          <a href="/#highmark"> View Project</a>
-          </p>
-
-
-
-          <a style="display: inline">
-            <h4 class="post-subtitle" style="display: inline">
-                YITU Technology
-            </h4> 
-          </a>
-          <span class="post-meta" title="Estimated read time" style="font-size:15px">
-                Apr 2018 - Jul 2018
-          </span>
-          <p class="post-meta" style="font-size:15px">
-          Shanghai
-          &middot; 
-          Research and Development Intern
-          &middot; 
-          <a href="/#yitu"> View Project</a>
-          </p>
-
-          <a style="display: inline">
-            <h3 class="post-subtitle" style="display: inline">
-                eBay Inc.
-            </h3> 
-          </a>
-          <span class="post-meta" title="Estimated read time" style="font-size:15px">
-              Nov 2017 - Mar 2018
-          </span>
-          <p class="post-meta" style="font-size:15px">
-          Shanghai
-          &middot; 
-          DevOps Software Engineer Intern
-          &middot; 
-          <a href="/#ebay"> View Project</a>
-          </p>
-
-
-
-          <a style="display: inline">
-            <h4 class="post-subtitle" style="display: inline">
-                University of Waterloo
-            </h4>
-          </a>
-          <span class="post-meta" title="Estimated read time" style="font-size:15px">
-              Sep 2017 - Oct 2017
-          </span>
-          <p class="post-meta" style="font-size:15px">
-          Waterloo, ON
-          &middot; 
-          Research Intern
-          &middot; 
-          <a href="https://cs.uwaterloo.ca/~mli/">Advisor: Ming Li 
-          </a>
-          &middot; 
-          <a href="/#uw"> View Project</a>
-          </p>
-
-
-          <a style="display: inline">
-            <h4 class="post-subtitle" style="display: inline">
-                University of California, Irvine
-            </h4> 
-          </a>
-          <span class="post-meta" title="Estimated read time" style="font-size:15px">
-              Jul 2017 – Sep 2017
-          </span>
-          <p class="post-meta" style="font-size:15px">
-          Irvine, CA
-          &middot; 
-          Research Intern
-          &middot; 
-          <a href="https://chenli.ics.uci.edu/">Advisor: Chen Li 
-          </a>
-          &middot; 
-          <a href="/#uci"> View Project</a>
-          </p>
-
-
-
-          <a style="display: inline">
-            <h4 class="post-subtitle" style="display: inline">
-                Harvard Medical School
-            </h4> 
-          </a>
-          <span class="post-meta" title="Estimated read time" style="font-size:15px">
-              Oct 2017 - Jun 2018
-          </span>
-          <p class="post-meta" style="font-size:15px">
-          Boston, MA
-          &middot; 
+                        <a style="display: inline">
+                            <h4 class="post-subtitle" style="display: inline">
+                                Harvard Medical School
+                            </h4> 
+                        </a>
+                        <span class="post-meta" title="Estimated read time" style="font-size:15px">
+                            Oct 2017 - Jun 2018
+                        </span>
+                        <p class="post-meta" style="font-size:15px">
+                        Boston, MA
+                        &middot; 
           Research Assistant
           &middot; 
           <a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/74124">Advisor: Li Zhou 
@@ -225,7 +328,6 @@ html {
           &middot; 
           <a href="/#publications"> View Publications</a>
           </p>
-
 
 <!--
 <p class="post-meta">- Software Development Intern @ <a href="https://www.highmark.com/hmk2/index.shtml">Highmark</a>
@@ -236,26 +338,19 @@ html {
   <a href="#highmark"> View Project</a>
 </p>
 -->
-
-
-
         </article>
-
         <hr>
 
-
-        <div id="working"></div>
+        <div id="work"></div>
         <article class="post-preview">
           <a>
             <h2 class="post-title" style="margin: 30px 0">Working Experience</h2>
           </a>
 
-
-
           <h4 class="post-subtitle" id="highmark">
               Highmark Inc.
           </h4>
-          <p class="post-meta" style="font-size:15px">
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
           Pittsburgh, PA
           &middot; 
           Software Development Intern 
@@ -264,7 +359,7 @@ html {
               May 2019 – Present
           </span>
           </p>
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
           Developed a customized Splunk application for medical device vulnerability search and aggregation of Rapid7
           Nexpose records, hospital records, Mitre and NVD database using Javascript, Node.js, and XML.
           Built Splunk backend and node server using Splunk API, applied unit test using Artillery, performance test using
@@ -274,7 +369,7 @@ html {
           <h4 class="post-subtitle" id="yitu">
               YITU Technology
           </h4>
-          <p class="post-meta" style="font-size:15px">
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
           Shanghai
           &middot; 
           Research and Development Intern
@@ -283,7 +378,7 @@ html {
               Apr 2018 - Jul 2018
           </span>
           </p>
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
           Applied Mixup as a data augmentation method for image classification tasks, increased accuracy by 0.5-0.7% on
           28 datasets, reached 96.2% accuracy on Cifar-10 dataset.
           Added Inception series algorithms into TF Autobot.
@@ -294,7 +389,7 @@ html {
           <h4 class="post-subtitle" id="ebay">
               eBay Engineering and Research Center Co., Ltd
           </h4>
-          <p class="post-meta" style="font-size:15px">
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
           Shanghai
           &middot; 
           Research and Development Intern 
@@ -303,15 +398,12 @@ html {
               Apr 2018 - Jul 2018
           </span>
           </p>
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
           Revamped an online intelligent operation platform for DevOPS department, used Django as python web-frame
           work and Vue as JavaScript framework.
           Built a Scala project of back-end algorithms including unsupervised learning models (Kmeans, Hierarchical
           Clustering) and abnormal detection on the result of each pool (server) parameter's feature extraction, validated the risk level for each pool based on the classified history data, applying Apache Spark for distributed computing.
           </p>
-
-
-
 
         </article>
         <hr>
@@ -325,19 +417,16 @@ html {
           </a>
 
 
-
-
-
           <h4 class="post-subtitle">
               AWS Based Data Intensive Elastic Distributed Cloud Server 
           </h4>
-          <p class="post-meta" style="font-size:15px">
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
           Carnegie Mellon University &middot; 
           <span class="reading-time" title="Estimated read time">
               May 2019 – Jul 2019
           </span>
           </p>
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
           Designed and built a 4-tier, auto-scaling, e-commerce web service using Node.js with Express, indexed NoSQL
           database using MongoDB Atlas.
           Deployed on AWS EC2 with ELB (Elastic Load Balancer). Implemented central queueing, optimized on multiple
@@ -347,13 +436,13 @@ html {
           <h4 class="post-subtitle">
               Test-Based Search Engine
           </h4>
-          <p class="post-meta" style="font-size:15px">
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
           Carnegie Mellon University &middot; 
           <span class="reading-time" title="Estimated read time">
               Jan 2019 – Apr 2019
           </span>
           </p>
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
           Built a text-search engine with Apache Lucene in Java, containing a corpus of 500,000+ documents.
           Implemented multiple retrieval models including Ranked/Unranked Boolean, Okapi BM25, Indri, etc.
           Added SVM re-ranking, query expansion, intent-aware diversified search, and forward indexing as additional
@@ -363,13 +452,13 @@ html {
           <h4 class="post-subtitle">
               File Caching Distributed System and Remote File Operations System
           </h4>
-          <p class="post-meta" style="font-size:15px">
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
           Carnegie Mellon University &middot; 
           <span class="reading-time" title="Estimated read time">
               Jan 2019 – Mar 2019
           </span>
           </p>
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
           Built an RPC system to allow concurrent remote file operations in C.
           Designed and implemented a distributed system for file caching using Java RMI and Java threading.
           Designed and built a caching proxy, robustly handled multiple concurrent clients and ensured open-close session
@@ -380,10 +469,6 @@ html {
         </article>
         <hr>
 
-        
-
-
-
 
 
         <div id="research"></div>
@@ -392,13 +477,12 @@ html {
             <h2 class="post-title" style="margin: 30px 0">Research</h2>
           </a>
 
-
           <h4 class="post-subtitle" id="uci">
               <a href="http://cloudberry.ics.uci.edu/">
               Cloudberry
               </a>
           </h4>
-          <p class="post-meta" style="font-size:15px">
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
           University of California, Irvine &middot; 
           <a href="https://chenli.ics.uci.edu/">Advisor: Chen Li 
           </a>
@@ -407,7 +491,7 @@ html {
               Jul 2017 – Sep 2017
           </span>
           </p>
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
           Built part of middleware on top of a big data management system, Apache AsterixDB, mapped front-end query to
           MySQL and PostgreSQL query in Scala.
           Wrote the SQL translator and connector of middleware to databases which sent and received queries and transferred datatypes for
@@ -419,7 +503,7 @@ html {
                   De Novo Peptide Sequencing by Deep Learning
               </a>
           </h4>
-          <p class="post-meta" style="font-size:15px">
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
           University of Waterloo &middot; 
           <a href="https://cs.uwaterloo.ca/~mli/">Advisor: Ming Li 
           </a>
@@ -428,7 +512,7 @@ html {
               Sep 2017 - Oct 2017
           </span>
           </p>
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
           Contributed to the development of DeepNovo, a deep neural network model about de novo peptide sequencing using ion-CNN, spectrum-CNN, and long short term memory (LSTM) recurrent neural network (RNN) in Tensorflow.
           Promoted the recall accuracy by 6.2% for training model about inferring sequences from a tandem mass spectrum on the analysis of data independent acquisition via parameter adjustment.
           Used Cython to speed up 50% of data feeding process in Python and decrease training perplexity for 59.4%.
@@ -438,12 +522,61 @@ html {
 
 
 
-
         <div id="publications"></div>
         <article class="post-preview">
           <a href="https://www.researchgate.net/profile/Haohan_Zhang2">
             <h2 class="post-title" style="margin: 30px 0">Publications</h2>
           </a>
+
+          <h4 class="post-subtitle">
+              <a href="https://www.researchgate.net/profile/Chunlei_Tang2/publication/325742583_RegionAl_an_Optimized_Regional_Classifier_to_Predict_Mortality_in_Chronic_Obstructive_Pulmonary_Disease_Patients/links/5b212a4f458515270fc6b848/RegionAl-an-Optimized-Regional-Classifier-to-Predict-Mortality-in-Chronic-Obstructive-Pulmonary-Disease-Patients.pdf">
+                  RegionAl: an Optimized Regional Classifier to Predict Mortality in Chronic Obstructive Pulmonary Disease Patients.
+              </a>
+          </h4>
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
+          <a href="https://scholar.google.ca/citations?user=gWW2LSUAAAAJ"><strong>Haohan Zhang</strong></a>, 
+          Chunlei Tang, Joseph M Plasek, Yun Xiong, Jing Ma, Li Zhou, David W Bates
+          <br/>
+          <a href="https://www.amia.org/amia2018">
+              2018 American Medical Informatics Association Annual Symposium (AMIA)
+          </a>
+          </p>
+
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
+          We previously developed a regional classifier based on a spiral timeline 
+          for visualizing literature data,
+          which presents research topic words under different themes in a spiral map 
+          to show the chronological development of focused research topics. 
+          When timelines are combined with a geographical map, 
+          they depict temporal patterns of events with respect to their spatial attributes. 
+          we call a “spiral atlas of temporal variation” (abbreviated as “atlas”).
+          </p>
+
+
+          <h4 class="post-subtitle">
+              <a href="https://ieeexplore.ieee.org/abstract/document/8621489">
+                  A Deep Learning Approach to Handling Temporal Variation in Chronic Obstructive Pulmonary Disease Progression
+              </a>
+          </h4>
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
+          Chunlei Tang, Joseph M Plasek, 
+          <a href="https://scholar.google.ca/citations?user=gWW2LSUAAAAJ"><strong>Haohan Zhang</strong></a>, 
+          Yun Xiong, David W Bates, Li Zhou
+          <br/>
+          <a href="http://orienta.ugr.es/bibm2018/">
+              2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)
+          </a>
+          </p>
+
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
+          Chronic Obstructive Pulmonary Disease (COPD) is a leading cause of mortality in the United States. 
+          Representing COPD progression using temporal graphs may offer critical clinical insights. 
+          LSTM (Long-Short Term Memory) units in recurrent neural networks can process data with constant elapsed times between consecutive elements of a sequence 
+          but cannot handle irregular time intervals 
+          (i.e., segments with unequal-time). 
+          In this study, we propose a four-layer deep learning model that utilizes a specially configured recurrent neural network to capture irregular time lapse segments. 
+          Experiments on a corpus of COPD patients' clinical notes compared to baseline algorithms showed that our model improved interpretability as well as the accuracy of estimating COPD progression.
+          </p>
 
 
           <h4 class="post-subtitle">
@@ -451,15 +584,17 @@ html {
                   Developing a regional classifier to track patient needs in medical literature using spiral timelines on a geographical map
               </a>
           </h4>
-          <p class="post-meta" style="font-size:15px">
-          Chunlei Tang, <strong>Haohan Zhang</strong>, Kenneth H Lai, Yuxuan She, Yun Xiong, Li Zhou
-          &middot; 
+          <p class="post-meta" style="font-size:15px; margin: 0 0 20px 0">
+          Chunlei Tang, 
+          <a href="https://scholar.google.ca/citations?user=gWW2LSUAAAAJ"><strong>Haohan Zhang</strong></a>, 
+          Kenneth H Lai, Yuxuan She, Yun Xiong, Li Zhou
+          <br/>
           <a href="https://muii.missouri.edu/bibm2017/">
               2017 IEEE International Conference on Bioinformatics and Biomedicine (BIBM) 
           </a>
           </p>
 
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
+          <p class="post-meta" style="font-family:Lora; margin: 10px 0 40px 0">
           In this paper, we propose a linear classifier based on a spiral, 
           which we call a regional classifier. 
           The study emphasizes the development of visualization 
@@ -472,62 +607,8 @@ html {
           Our evaluation showed that the regional classifier produces better 
           visual effects than support vector machine classifiers. 
           </p>
-
-
-          <h4 class="post-subtitle">
-              <a href="https://ieeexplore.ieee.org/abstract/document/8621489">
-                  A Deep Learning Approach to Handling Temporal Variation in Chronic Obstructive Pulmonary Disease Progression
-              </a>
-          </h4>
-          <p class="post-meta" style="font-size:15px">
-          Chunlei Tang, Joseph M Plasek, <strong>Haohan Zhang</strong>, Yun Xiong, David W Bates, Li Zhou
-          &middot; 
-          <a href="http://orienta.ugr.es/bibm2018/">
-              2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)
-          </a>
-          </p>
-
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
-          Chronic Obstructive Pulmonary Disease (COPD) is a leading cause of mortality in the United States. 
-          Representing COPD progression using temporal graphs may offer critical clinical insights. 
-          LSTM (Long-Short Term Memory) units in recurrent neural networks can process data with constant elapsed times between consecutive elements of a sequence 
-          but cannot handle irregular time intervals 
-          (i.e., segments with unequal-time). 
-          In this study, we propose a four-layer deep learning model that utilizes a specially configured recurrent neural network to capture irregular time lapse segments. 
-          Experiments on a corpus of COPD patients' clinical notes compared to baseline algorithms showed that our model improved interpretability as well as the accuracy of estimating COPD progression.
-          </p>
-
-          <h4 class="post-subtitle">
-              <a href="https://www.researchgate.net/profile/Chunlei_Tang2/publication/325742583_RegionAl_an_Optimized_Regional_Classifier_to_Predict_Mortality_in_Chronic_Obstructive_Pulmonary_Disease_Patients/links/5b212a4f458515270fc6b848/RegionAl-an-Optimized-Regional-Classifier-to-Predict-Mortality-in-Chronic-Obstructive-Pulmonary-Disease-Patients.pdf">
-                  RegionAl: an Optimized Regional Classifier to Predict Mortality in Chronic Obstructive Pulmonary Disease Patients.
-              </a>
-          </h4>
-          <p class="post-meta" style="font-size:15px">
-          <strong>Haohan Zhang</strong>, Chunlei Tang, Joseph M Plasek, Yun Xiong, Jing Ma, Li Zhou, David W Bates
-          &middot; 
-          <a href="https://www.amia.org/amia2018">
-              2018 American Medical Informatics Association Annual Symposium (AMIA)
-          </a>
-          </p>
-
-          <p class="post-meta" style="font-family:Lora; margin: 10px 0 30px 0">
-          We previously developed a regional classifier based on a spiral timeline 
-          for visualizing literature data,
-          which presents research topic words under different themes in a spiral map 
-          to show the chronological development of focused research topics. 
-          When timelines are combined with a geographical map, 
-          they depict temporal patterns of events with respect to their spatial attributes. 
-          we call a “spiral atlas of temporal variation” (abbreviated as “atlas”).
-          </p>
-
-
-
         </article>
         <hr>
-
-
-
-
 
 
 

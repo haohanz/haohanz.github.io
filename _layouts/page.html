@@ -1,37 +1,35 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body>
+        {% include navbar.html %}
+        <!-- Page Header -->
+        {% if page.background %}
+        <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+            {% else %}
+            <header class="masthead">
+                {% endif %}
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <div class="page-heading" style="padding:30% 0 20% 0">
+                                <h1>{{ page.title }}</h1>
+                                {% if page.description %}
+                                <span class="subheading">
+                                    +1 (732) 829-0637 | 
+                                    <a href="mailto:haohanz@andrew.cmu.edu" style="color:white">haohanz@andrew.cmu.edu</a>
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% include footer.html %}
 
-<!-- Page Header -->
-{% if page.background %}
-<!--
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
--->
-<header class="masthead" style="background-image: url('/img/posts/06.jpg')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.description %}
-            <span class="subheading">{{ page.description }}</span>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        {{ content }}
-
-      </div>
-    </div>
-  </div>
+                </div>
+            </header>
+            {{ content }}
+            {% include scripts.html %}
+            {% include google-analytics.html %}
+    </body>
+</html>
