@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Authority Metrics: PageRank, TSPR and HITS"
-subtitle: "Rearning Notes for CMU Course 11642 Search Engine"
+subtitle: "Learning Notes for CMU Course 11642 Search Engine"
 date: 2019-05-01 23:45:13 -0400
 background: '/img/bg-post.jpg'
 ---
