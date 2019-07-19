@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Atomic Transactions"
-subtitle: "Learning Notes for CMU Course 15640 Distributed Systems"
+subtitle: "Learning Notes of CMU Course 15-640 Distributed Systems"
 date: 2019-03-26 23:45:13 -0400
 background: '/img/posts/04.jpg'
 ---

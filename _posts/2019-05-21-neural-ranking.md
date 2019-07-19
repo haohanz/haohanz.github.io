@@ -1,12 +1,14 @@
 ---
 layout: post
 title: "Neural Ranking: DSMM, DRMM, K-NRM, Conv-KNRM"
-subtitle: "Learning Notes for CMU Course 11642 Search Engine"
+subtitle: "Learning Notes of CMU Course 11-642 Search Engine"
 date: 2019-05-21 23:45:13 -0400
 background: '/img/posts/10.jpeg'
 ---
 ##### Why Apply Deep Learning in Search Engine?
 More features, more complex combination of weight and features, less hand-crafted features and functions.
+<hr>
+## Table of Contents
 - <a href="#dsmm"> DSMM </a>
 - <a href="#drmm"> DRMM </a>
 - <a href="#knrm"> K-NRM </a>
@@ -18,8 +20,14 @@ More features, more complex combination of weight and features, less hand-crafte
 ## DSMM
 ##### Motivation
 - Representation: solve query vocabulary mismatch, represent text in concept based space
-- Loss: $$ L(*) = −\log\prod{\Pr(D^+|Q)}$$
-, where $$\Pr(D│Q) = \frac{exp⁡(\lambda R(Q, D))}   {  (\sum_{D^′ \in D} exp⁡(\lambda R(Q,D^′))   } $$
+- Loss: 
+\begin{equation}
+L(*) = −\log\prod{\Pr(D^+|Q)}
+\end{equation}
+Where 
+\begin{equation}
+\Pr(D│Q) = \frac{exp⁡(\lambda R(Q, D))}   {  \sum_{D^′ \in D} exp⁡(\lambda R(Q,D^′)  }
+\end{equation}
 - Use 500k term -> 30k trigram hashing vector
     - Robust to the out of vocabulary problem
     - Low collision rate: 22 out of 500k terms
@@ -54,17 +62,21 @@ More features, more complex combination of weight and features, less hand-crafte
 - Structure:
     - -> Embedding layer 
     - -> Pyramid pooling (Binning) 
-    - -> Feed forward matching to learn the interaction between (q_i, d_i)
+    - -> Feed forward matching to learn the interaction between $(q_i, d_i)$
     - -> term gating using idf 
     - -> sum scores of all the terms (linear combination)
-    - $$ g_i =\frac{ exp⁡(w \cdot idf(q_i))  }  {  \sum_{j=1}^n exp⁡(w \cdot idf(q_j))   }      $$, where i is the index for q_i  in a query q.
-    - (Where does the idf table come from?)
+\begin{equation}
+g_i =\frac{ exp⁡(w \cdot idf(q_i))  }  {  \sum_{j=1}^n exp⁡(w \cdot idf(q_j))   }      
+\end{equation}
+where i is the index for $q_i$  in a query q.
 - Training:
     - Pairwise training with hinge loss, minimize it
-    - $$ L(q, d^+, d^−)= \max⁡(0, 1−s(q, d^+ )+s(q, d^−)) $$
+\begin{equation}
+L(q, d^+, d^−)= \max⁡(0, 1−s(q, d^+ )+s(q, d^−))
+\end{equation}
 - Evaluation:
     - Better than rankSVM
-    - Should be compared to query expansion? Should? Because used word2vec which input a lot of texts!
+    - Should be compared to query expansion? Because used word2vec which input a lot of texts
 
 ##### What's the similarity and difference for DRMM and old retrieval models?
 - Same:
@@ -101,12 +113,12 @@ More features, more complex combination of weight and features, less hand-crafte
 
 ##### Architecture of K-NRM:
 - -> Embedding layer 
-- -> translation layer (M_(n×m)) matrix
+- -> translation layer $(M_{n \times m})$ matrix
 - -> kernel pooling 
-    - each bin has a kernel that center at the bin's center, 11 bins->11 kernels!
-    - Each q_i  term has a soft-tf score per bin, which is the sum of the kernel on all thet docs that are in this range.
-    - Thus each q_i  has 11 scores after the kernel pooling. Just the same as DRMM's pyramid pooling output
-    - Log sum each 11 length vector for all the query terms, finally get 1×11 output. (k=11), there's only one feature for each kernel!
+    - each bin has a kernel that center at the bin's center, 11 bins->11 kernels
+    - Each $q_i$  term has a soft-tf score per bin, which is the sum of the kernel on all thet docs that are in this range.
+    - Thus each $q_i$  has 11 scores after the kernel pooling. Just the same as DRMM's pyramid pooling output
+    - Log sum each 11 length vector for all the query terms, finally get 1×11 output. (k=11), there's only one feature for each kernel
         - Why log sum? Panelize the query terms with few matches. 
 - -> Feed Forward Matching (1 layer NN) (pairwise training)
 - -> Final score

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Personalization for Search Engine"
-subtitle: "Learning Notes for CMU Course 11642 Search Engine"
+subtitle: "Learning Notes of CMU Course 11-642 Search Engine"
 date: 2019-05-02 23:45:13 -0400
 background: '/img/posts/08.jpeg'
 ---

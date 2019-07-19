@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Feature Based Retrieval - Machine Learning in Search Engine"
-subtitle: "Learning Notes for CMU Course 11642 Search Engine"
+subtitle: "Learning Notes of CMU Course 11-642 Search Engine"
 date: 2019-04-26 23:45:13 -0400
 background: '/img/bg-index.jpg'
 ---

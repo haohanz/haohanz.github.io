@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Diversity: MMR, xQuAD and PM2"
-subtitle: "Learning Notes for CMU Course 11642 Search Engine"
+subtitle: "Learning Notes of CMU Course 11-642 Search Engine"
 date: 2019-05-21 23:45:13 -0400
 background: '/img/posts/12.jpeg'
 ---
