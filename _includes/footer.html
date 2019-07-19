@@ -2,6 +2,7 @@
 
 <hr>
 
+<script type="text/javascript" src="/assets/bsz.pure.mini.js"></script>
 <footer>
   <div class="container">
     <div class="row">
@@ -58,7 +59,20 @@
           </li>
           {% endif %}
         </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
+        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}
+        <br/>
+         <span id="busuanzi_container_site_pv">
+                 Visits: <span id="busuanzi_value_site_pv"></span>
+         </span>
+         &middot;
+         <span id="busuanzi_container_site_uv">
+               People: <span id="busuanzi_value_site_uv"></span>
+         </span>
+         &middot;
+          <span id="busuanzi_container_page_pv">
+                Page Views: <span id="busuanzi_value_page_pv"></span>
+          </span>
+        </p>
       </div>
     </div>
   </div>
