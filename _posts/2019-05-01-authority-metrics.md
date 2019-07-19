@@ -6,14 +6,25 @@ date: 2019-05-01 23:45:13 -0400
 background: '/img/bg-post.jpg'
 ---
 
-# PageRank + TSPR + HITS
+## Table of Contents
+- <a href="#motivation">Motivation</a>
+- <a href="#pr">PageRank</a>
+- <a href="#tspr">TSPR</a>
+- <a href="#hits">HITS</a>
 
+
+<div id="motivation"/>
+<hr>
+## Motivation
 Why authority metrics
 - To decide which website to trust more, 
 - to give some content-irrelevant metrics.
 
 
-Properties for PR
+<div id="pr"/>
+<hr>
+## PageRank
+Properties for PageRank
 - Usually for journals or papers for citation analysis
 - Query independent, cause mistakes
 - The computation itself makes it easy to manipulate
@@ -22,8 +33,7 @@ Properties for PR
     - The sink page
     - The links inside one page
 
-
-How PR works?
+How PR works
 - Random walk, voting procedure
     - Larger d, harder to converge!
     - Init:
@@ -31,7 +41,10 @@ $$PageRank(p_i) = \frac{1}{\|C\|}$$
     - Iteration: 
 $$PageRank(p_k)=\frac{1−d}{\|C\|} + d\sum_{p_j∈Inlinks(p_i)}\frac{PageRank(p_j)}{\|OutLinks(p_j)\|}$$
 
-What is TSPR (Topic sensitive!)
+<div id="tspr"/>
+<hr>
+## TSPR
+What is TSPR (Topic Sensitive PageRank)
 - TSPR for a topic of d: only teleportation over the same topic of d
 - The score of final:
 \begin{equation}
@@ -39,6 +52,9 @@ TSPR_q (d)= \sum_{i∈I_q} w_i \times TSPR_i (d)
 \end{equation}
 
 
+<div id="hits"/>
+<hr>
+## HITS
 What is HITS (HyperLink included Topic Search)
 - Only include a top n's result's expansion of inLink and outLink
 - For each iteration, init all = 1  
@@ -49,7 +65,6 @@ What is HITS (HyperLink included Topic Search)
     A(p_k )= \sum_{p_j \in InLink(p_k )} H(p_j )
 \end{equation}
 - Normalize after each iteration
-
 
 Properties of HITS
 - Pros
