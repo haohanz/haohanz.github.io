@@ -67,14 +67,23 @@ Tend to give higher priority to documents that satisfy multiple intents
 
 ## Implicit Methods
 - Maximum Marginal Relevance (MMR)
-    - MMR = $$ arg \max_{d_i \in R/S}⁡\lambda \Pr(d_i, q) \\
-  − (1−\lambda) \max_{d_j \in S}⁡Similarity(d_i, d_j )$$
-    - Similarity not symmetric
-        - Use VSM, calculate "anything to anything" similarity
-        - KLD: anything to anything, but not symmetric
-        - Use Jensen-Shannon Divergence - anything to anything
-        - $$JS(x||y) = \frac{1}{2} KL(x||M) + \frac{1}{2} KL(y||M) $$
-        - $$ M=\frac{x+y}{2}$$
+
+$$\begin{eqnarray} 
+MMR &= arg \max_{d_i \in R/S}⁡\lambda \Pr(d_i, q) \\
+&− (1−\lambda) \max_{d_j \in S}⁡Similarity(d_i, d_j )
+\end{eqnarray}$$
+
+- Similarity not symmetric
+    - Use VSM, calculate "anything to anything" similarity
+    - KLD: anything to anything, but not symmetric
+    - Use Jensen-Shannon Divergence - anything to anything
+\begin{equation}
+JS(x||y) = \frac{1}{2} KL(x||M) + \frac{1}{2} KL(y||M)
+\end{equation}
+Where
+\begin{equation}
+M=\frac{x+y}{2}
+\end{equation}
 - LeToR for divergence
     - Approach: fit LeToR model directly to optimize a diversity measure metric, use diversification based training data
     - Fail reason:
@@ -98,13 +107,18 @@ Tend to give higher priority to documents that satisfy multiple intents
     - Same with MMR:
         - Greedy: docs are picked from top to bottom sequentially. 
         - Relational - ListMLE:
-        - $$\Pr(d_i│S_i, w) = \frac {exp(w_r x_i + w_d y_i) } {\sum_{x_j∈S_i} exp⁡(w_r x_j+w_d y_j)} $$
-        - $$L(R│w)= − \prod \Pr(d_i |w) $$
-        - Diff with ListMLE:
-            - Has a weight for diversity and feature y for diversity added
-            - Cannot calclulate the h(x) all of a time then re rank, has to build while rank, because the y diversity features are built on the previous ranked docs.
-        - Performance is the best
-        - Each feature could be either min or max or avg
+\begin{equation}
+\Pr(d_i│S_i, w) = \frac {exp(w_r x_i + w_d y_i) } {\sum_{x_j∈S_i} exp⁡(w_r x_j+w_d y_j)}
+\end{equation}
+\begin{equation}
+L(R│w)= − \prod \Pr(d_i |w)
+\end{equation}
+
+    - Diff with ListMLE:
+        - Has a weight for diversity and feature y for diversity added
+        - Cannot calclulate the h(x) all of a time then re rank, has to build while rank, because the y diversity features are built on the previous ranked docs.
+    - Performance is the best
+    - Each feature could be either min or max or avg
 
 - Implicit Methods Pros and Cons
     - Don't favor any intent, all intents treated equally
@@ -132,8 +146,12 @@ Tend to give higher priority to documents that satisfy multiple intents
         - The final rank prefer the mediocre docs that covers more documents, then prefer the top relevant document, documents that doesn't rank high and doesn't cover a lot of intents would not be promoted.
         - One query has 7-10 intents, thus time complexity is high
     - Equation:
-        - $$ d^∗ = arg⁡\max_{d \in R/S}⁡(1−\lambda) \Pr(d│q) + \lambda \Pr(d, \bar{S}|q) $$ 
-        - $$\Pr(d, \bar{S}│q) = \sum_{q_i \in Q} [\Pr(q_i│q) \Pr(d│q_i)  \prod_{d_j \in S} (1 − \Pr (d_j|q_i))]$$
+\begin{equation}
+d^∗ = arg⁡\max_{d \in R/S}⁡(1−\lambda) \Pr(d│q) + \lambda \Pr(d, \bar{S}|q)
+\end{equation}
+\begin{equation}
+\Pr(d, \bar{S}│q) = \sum_{q_i \in Q} [\Pr(q_i│q) \Pr(d│q_i)  \prod_{d_j \in S} (1 − \Pr (d_j|q_i))]
+\end{equation}
     - Why suggest queries are more effective than related queries
         - The cons of xQuAD: the intents are treated equally, thus when there's a high recall algorithm that provided original rank, the discovering query intetns would find many rare or unpopular intents, which users doesn't need.
 <div id="pm2"/>
@@ -144,9 +162,13 @@ Tend to give higher priority to documents that satisfy multiple intents
         - Select a document that covers the $q_i$, and might also cover other query intents.
     - The update process
         - Get doc that has the max
-        - $$\lambda qt[i^∗] \Pr(d_i│q_{i^∗}) + (1 − \lambda) \Pr(d_{j\ others} | q_{j\ others}) $$
+\begin{equation}
+\lambda qt[i^∗] \Pr(d_i│q_{i^∗}) + (1 − \lambda) \Pr(d_{j\ others} | q_{j\ others})
+\end{equation}
         - Update the rank after each iteration
-        - $$ s_i += \frac {\Pr(d^∗│q)} {\sum_{q_j \in Q} \Pr(d^∗ |q_j)     } $$
+\begin{equation}
+s_i += \frac {\Pr(d^∗│q)} {\sum_{q_j \in Q} \Pr(d^∗ |q_j)     }
+\end{equation}
 
 <div id="summary"/>
 <hr>
