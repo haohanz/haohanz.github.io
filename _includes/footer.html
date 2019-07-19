@@ -3,6 +3,7 @@
 <hr>
 
 <script type="text/javascript" src="/assets/bsz.pure.mini.js"></script>
+<script type="text/javascript" src="/assets/vendor/jquery/jquery.min.js"></script>
 <footer>
   <div class="container">
     <div class="row">
@@ -60,8 +61,7 @@
           {% endif %}
         </ul>
         <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}
-        </p>
-        <p style="display:none">
+        <br/>
          <span id="busuanzi_container_site_pv">
                  Visits: <span id="busuanzi_value_site_pv"></span>
          </span>
@@ -69,10 +69,28 @@
          <span id="busuanzi_container_site_uv">
                People: <span id="busuanzi_value_site_uv"></span>
          </span>
-         &middot;
-          <span id="busuanzi_container_page_pv">
-                Page Views: <span id="busuanzi_value_page_pv"></span>
-          </span>
+         <script type="text/javascript">
+         var pv = setInterval(fixPV, 100);
+         var uv = setInterval(fixUV, 100);
+         var pvOffset = 2241;
+         var uvOffset = 918;
+         function fixPV () {
+             var val = $("#busuanzi_value_site_pv")[0].innerHTML;
+             if (val.length) {
+                 clearInterval(pv);
+                 $("#busuanzi_value_site_pv")[0].innerHTML =
+                     parseInt(val) + pvOffset;
+             }
+         }
+         function fixUV () {
+             var val = $("#busuanzi_value_site_uv")[0].innerHTML;
+             if (val.length) {
+                 clearInterval(uv);
+                 $("#busuanzi_value_site_uv")[0].innerHTML =
+                     parseInt(val) + uvOffset;
+             }
+         }
+         </script>
         </p>
       </div>
     </div>
