@@ -5,7 +5,7 @@ subtitle: "Learning Notes for CMU Course 11642 Search Engine"
 date: 2019-05-21 23:45:13 -0400
 background: '/img/posts/10.jpeg'
 ---
-##### Why user Deep Learning in Search Engine?
+##### Why Apply Deep Learning in Search Engine?
 More features, more complex combination of weight and features, less hand-crafted features and functions.
 - <a href="#dsmm"> DSMM </a>
 - <a href="#drmm"> DRMM </a>
