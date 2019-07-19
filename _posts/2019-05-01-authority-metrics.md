@@ -37,9 +37,13 @@ How PR works
 - Random walk, voting procedure
     - Larger d, harder to converge!
     - Init:
-$$PageRank(p_i) = \frac{1}{\|C\|}$$
+\begin{equation}
+PageRank(p_i) = \frac{1}{|C|}
+\end{equation}
     - Iteration: 
-$$PageRank(p_k)=\frac{1−d}{\|C\|} + d\sum_{p_j∈Inlinks(p_i)}\frac{PageRank(p_j)}{\|OutLinks(p_j)\|}$$
+\begin{equation}
+PageRank(p_k)=\frac{1−d}{|C|} + d\sum_{p_j∈Inlinks(p_i)}\frac{PageRank(p_j)}{|OutLinks(p_j)|}
+\end{equation}
 
 <div id="tspr"/>
 <hr>

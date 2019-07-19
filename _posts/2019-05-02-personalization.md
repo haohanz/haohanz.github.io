@@ -6,9 +6,12 @@ date: 2019-05-02 23:45:13 -0400
 background: '/img/posts/08.jpeg'
 ---
 ### Topic-based personailization
-$$ \beta \Pr (d│q)+(1−\beta) \Pr_{cat} (d│q, u) $$
-
-$$ \Pr_{cat} (d|q, u)=  \sum_c \Pr (c│d) \Pr (c|u) $$
+\begin{equation}
+\beta \Pr (d│q)+(1−\beta) \Pr_{cat} (d│q, u)
+\end{equation}
+\begin{equation}
+\Pr_{cat} (d|q, u)=  \sum_c \Pr (c│d) \Pr (c|u)
+\end{equation}
 - Metric: MRR - improved a lot on the ambiguous queries
 - Main idea:
     - consider the user's and doc's topic-category matches
