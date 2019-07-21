@@ -70,10 +70,10 @@
                People: <span id="busuanzi_value_site_uv"></span>
          </span>
          <script type="text/javascript">
-         var pv = setInterval(fixPV, 100);
-         var uv = setInterval(fixUV, 100);
-         var pvOffset = 3505 ;
-         var uvOffset = 1105;
+         var pvOffset = parseInt({{ site.pvOffset }});
+         var uvOffset = parseInt({{ site.uvOffset }});
+         var pv = setInterval(fixPV, 50);
+         var uv = setInterval(fixUV, 50);
          function fixPV () {
              var val = $("#busuanzi_value_site_pv")[0].innerHTML;
              if (val.length) {

@@ -13,6 +13,9 @@ linkedin_username:  haohan-zhang
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-144117094-1 # out your google-analytics code
+# Offset from google-analytics
+pvOffset:           4098
+uvOffset:           1271
 
 # Build settings
 markdown:           kramdown
