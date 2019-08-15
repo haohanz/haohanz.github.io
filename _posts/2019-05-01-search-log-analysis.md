@@ -116,8 +116,10 @@ background: '/img/posts/11.jpeg'
     - Get Set1 and Set2
         - Set1: the most frequent queries with q as a substring
         - Set2: the most frequent queries that follows q
-    - Get Score of the union of Set1 and set2 queries q_s
-        $$ Score(q_s) = \frac {Count(q_s)+ \lambda_1 }{N_1+\lambda_1  } \times \frac {count_follows (q, q_s )+λ_2 } {N_2+λ_2 }
+    - Get Score of the union of Set1 and set2 queries $$q_s$$
+\begin{equation}
+Score(q_s) = \frac {Count(q_s)+ \lambda_1 }{N_1+\lambda_1  } \times \frac {count_follows (q, q_s )+λ_2 } {N_2+λ_2 }
+\end{equation}
 
 <div id="intent"/>
 <hr>
